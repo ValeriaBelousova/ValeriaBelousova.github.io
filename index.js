@@ -201,10 +201,10 @@ map.on('load', function() {
     })
     ////////////////////////////////////////////////////////////////////
     const images =[
-        {imageUrl: 'http://localhost:8000/icon/Gray.png', id: 'metroSavTim'},
-        {imageUrl: 'http://localhost:8000/icon/Cyan.png', id: 'metroSavBKL'},
-        {imageUrl: 'http://localhost:8000/icon/Green.png', id: 'metroBelZam'},
-        {imageUrl: 'http://localhost:8000/icon/Brown.png', id: 'metroBelKolt'},
+        {imageUrl: 'https://raw.githubusercontent.com/ValeriaBelousova/ValeriaBelousova.github.io/master/icon/Gray.png', id: 'metroSavTim'},
+        {imageUrl: 'https://raw.githubusercontent.com/ValeriaBelousova/ValeriaBelousova.github.io/master/icon/Cyan.png', id: 'metroSavBKL'},
+        {imageUrl: 'https://raw.githubusercontent.com/ValeriaBelousova/ValeriaBelousova.github.io/master/icon/Green.png', id: 'metroBelZam'},
+        {imageUrl: 'https://raw.githubusercontent.com/ValeriaBelousova/ValeriaBelousova.github.io/master/icon/Brown.png', id: 'metroBelKolt'},
       ]
       Promise.all(
           images.map(img => new Promise((resolve, reject) => {
