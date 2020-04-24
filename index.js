@@ -158,10 +158,10 @@ map.on('load', function() {
         );
     ///////////////////////////////////////////////////////////
     const routes = [
-        {routeUrl: url('data/sav_kalin.geojson'), id: 'sav_kalin'},
-        {routeUrl: url('data/sav_tim.geojson'), id: 'sav_tim'},
-        {routeUrl: url('/data/bel_kolt.geojson'), id: 'bel_kolt'},
-        {routeUrl: url('data/bel_green.geojson'), id: 'bel_green'},
+        {routeUrl: 'https://raw.githubusercontent.com/ValeriaBelousova/ValeriaBelousova.github.io/master/data/bel_green.geojson', id: 'sav_kalin'},
+        {routeUrl: 'https://raw.githubusercontent.com/ValeriaBelousova/ValeriaBelousova.github.io/master/data/sav_tim.geojson', id: 'sav_tim'},
+        {routeUrl: 'https://raw.githubusercontent.com/ValeriaBelousova/ValeriaBelousova.github.io/master//data/bel_kolt.geojson', id: 'bel_kolt'},
+        {routeUrl: 'https://raw.githubusercontent.com/ValeriaBelousova/ValeriaBelousova.github.io/master/data/bel_green.geojson', id: 'bel_green'},
     ]
     routes.map(route => {
         map.addSource(route.id, {
