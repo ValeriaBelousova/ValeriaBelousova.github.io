@@ -158,10 +158,10 @@ map.on('load', function() {
         );
     ///////////////////////////////////////////////////////////
     const routes = [
-        {routeUrl: 'http://localhost:8000/data/sav_kalin.geojson', id: 'sav_kalin'},
-        {routeUrl: 'http://localhost:8000/data/sav_tim.geojson', id: 'sav_tim'},
-        {routeUrl: 'http://localhost:8000/data/bel_kolt.geojson', id: 'bel_kolt'},
-        {routeUrl: 'http://localhost:8000/data/bel_green.geojson', id: 'bel_green'},
+        {routeUrl: url('data/sav_kalin.geojson'), id: 'sav_kalin'},
+        {routeUrl: url('data/sav_tim.geojson'), id: 'sav_tim'},
+        {routeUrl: url('/data/bel_kolt.geojson'), id: 'bel_kolt'},
+        {routeUrl: url('data/bel_green.geojson'), id: 'bel_green'},
     ]
     routes.map(route => {
         map.addSource(route.id, {
