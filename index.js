@@ -370,7 +370,7 @@ map.on('load', function() {
     // use the three.js GLTF loader to add the 3D model to the three.js scene
             var loader = new THREE.GLTFLoader();
             loader.load(
-                'https://raw.githubusercontent.com/ValeriaBelousova/3d-model/master/test_02_60.gltf',
+                'https://raw.githubusercontent.com/ValeriaBelousova/3d-model/master/Zavod.gltf',
                 function(gltf) {
                     this.scene.add(gltf.scene);
                 }.bind(this)
