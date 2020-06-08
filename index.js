@@ -211,7 +211,7 @@ map.on("load", function () {
               {
               'type': 'Feature',
               'properties': {
-                  'description':'<h3>Единая Медиа Группа</h3><p>Серпуховско-Тимирязевская линия,<br> выход 7</p>',
+                  'description':'<h3>Единая Медиа Группа</h3><p>Москва, ул. Правды, дом 24, стр. 3,<br> 5 этаж</p>',
                   'icon': 'iconEMG',
               },
               'geometry': {
