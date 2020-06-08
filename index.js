@@ -195,6 +195,7 @@ map.on("load", function () {
         {imageUrl: 'https://raw.githubusercontent.com/ValeriaBelousova/ValeriaBelousova.github.io/master/icon/Cyan.png', id: 'metroSavBKL'},
         {imageUrl: 'https://raw.githubusercontent.com/ValeriaBelousova/ValeriaBelousova.github.io/master/icon/Green.png', id: 'metroBelZam'},
         {imageUrl: 'https://raw.githubusercontent.com/ValeriaBelousova/ValeriaBelousova.github.io/master/icon/Brown.png', id: 'metroBelKolt'},
+        {imageUrl: 'https://raw.githubusercontent.com/ValeriaBelousova/ValeriaBelousova.github.io/master/icon/EMG.png', id: 'iconEMG'},
       ]
       Promise.all(
           images.map(img => new Promise((resolve, reject) => {
@@ -207,6 +208,17 @@ map.on("load", function () {
       
       function losdIcon() {
           var geojsonAr = [
+              {
+              'type': 'Feature',
+              'properties': {
+                  'description':'<h3>Единая Медиа Группа</h3><p>Серпуховско-Тимирязевская линия,<br> выход 7</p>',
+                  'icon': 'iconEMG',
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [37.583338, 55.788196]
+              }
+              },
               {
               'type': 'Feature',
               'properties': {
