@@ -30,6 +30,7 @@ map.on("load", function () {
     });
     
     // Add pulsing dot
+    /*
     map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
         
     map.addSource('points', {
@@ -99,6 +100,7 @@ map.on("load", function () {
         //         });
         //     })
         // });
+    */
     
     // Add 3D building
     var layers = map.getStyle().layers;
