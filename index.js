@@ -1,44 +1,32 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoidmFsZXJpYWJlbG91c292YSIsImEiOiJjanBmMmt0c2cwNjQyM3FsZ2gzY2dvemNvIn0.skr82NeiNVFPUi-zxKKqiw';
     var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/valeriabelousova/ck9dksicn07z31jnpx9461nbd',
-        center: [37.583338, 55.788196],
-        zoom: 15.5,
-        pitch: 45,
-        bearing: -17.6,
-        container: 'map',
-        antialias: true,
-        renderWorldCopies: true,
-        minZoom: 1,
-        antialias: true
-    });
+    container,
+    style: "mapbox://styles/valeriabelousova/ck9dksicn07z31jnpx9461nbd",
+    center: [37.583338, 55.788196],
+    zoom: 15.5,
+    pitch: 45,
+    bearing: -17.6,
+    antialias: true,
+    renderWorldCopies: true,
+    minZoom: 1
+  });
 var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-right');
 
-map.on('load', function() {
-    map.on('render', (e) => {
-        if (e.target.getZoom() < 15) {
-            map.flyTo({
-                center: e.target.getCenter(), 
-                zoom: e.target.getZoom(),
-                bearing: 0,
-                pitch: 0
-            })
-        }
-        else {
-            map.flyTo({
-                center: e.target.getCenter(), 
-                zoom: e.target.getZoom(),
-                bearing: -17.6,
-                pitch: 45
-            })
-        }
-        if (e.target.getZoom() < 13.7) {
-            map.setLayoutProperty('3d-model', 'visibility', 'none')
-        }
-        else {
-            map.setLayoutProperty('3d-model', 'visibility', 'visible')
-        }
+let prevZoom = 15.5;
+
+map.on("load", function () {
+    map.on("zoom", event => {
+      const modelThreshold = 13.7;
+      const zoom = event.target.getZoom();
+
+      if (zoom < modelThreshold && prevZoom >= modelThreshold) {
+        map.setLayoutProperty("3d-model", "visibility", "none");
+      } else if (zoom >= modelThreshold && prevZoom < modelThreshold) {
+        map.setLayoutProperty("3d-model", "visibility", "visible");
+      }
+
+      prevZoom = zoom;
     });
     
     // Add pulsing dot
