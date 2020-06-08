@@ -1,6 +1,6 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoidmFsZXJpYWJlbG91c292YSIsImEiOiJjanBmMmt0c2cwNjQyM3FsZ2gzY2dvemNvIn0.skr82NeiNVFPUi-zxKKqiw';
     var map = new mapboxgl.Map({
-    container,
+    container: 'map',
     style: "mapbox://styles/valeriabelousova/ck9dksicn07z31jnpx9461nbd",
     center: [37.583338, 55.788196],
     zoom: 15.5,
